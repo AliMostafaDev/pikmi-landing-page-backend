@@ -64,6 +64,12 @@ const dbConfig = {
   queueLimit: 0
 };
 
+
+console.log("MYSQLHOST:", process.env.MYSQLHOST);
+console.log("MYSQLUSER:", process.env.MYSQLUSER);
+console.log("MYSQLDATABASE:", process.env.MYSQLDATABASE);
+console.log("MYSQLPORT:", process.env.MYSQLPORT);
+
 // const dbConfig = {
 //   host: process.env.MYSQLHOST || 'localhost',
 //   user: process.env.MYSQLUSER || 'root',
