@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5000;
 
 
 app.use(cors({
-  origin: "https://pikmi.netlify.app",
+  origin: 'http://localhost:3000',
   // origin: process.env.FRONTEND_URL || 'http://localhost:3000',
   credentials: true // Allow cookies/sessions
 }));
@@ -54,16 +54,16 @@ const upload = multer({
 
 
 
-const dbConfig = {
-  host: "mysql.railway.internal",
-  user: "root",
-  password: "NuRYZHaZMxGQoWtzsIyrnhGXHAIEhQsh",
-  database: "railway",
-  port: "3306",
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0
-};
+// const dbConfig = {
+//   host: "mysql.railway.internal",
+//   user: "root",
+//   password: "NuRYZHaZMxGQoWtzsIyrnhGXHAIEhQsh",
+//   database: "railway",
+//   port: "3306",
+//   waitForConnections: true,
+//   connectionLimit: 10,
+//   queueLimit: 0
+// };
 
 
 console.log("MYSQLHOST:", process.env.MYSQLHOST);
@@ -71,16 +71,16 @@ console.log("MYSQLUSER:", process.env.MYSQLUSER);
 console.log("MYSQLDATABASE:", process.env.MYSQLDATABASE);
 console.log("MYSQLPORT:", process.env.MYSQLPORT);
 
-// const dbConfig = {
-//   host: process.env.MYSQLHOST || 'localhost',
-//   user: process.env.MYSQLUSER || 'root',
-//   password: process.env.MYSQLPASSWORD || '',
-//   database: process.env.MYSQLDATABASE || 'pikmi_db',
-//   port: process.env.MYSQLPORT,
-//   waitForConnections: true,
-//   connectionLimit: 10,
-//   queueLimit: 0
-// };
+const dbConfig = {
+  host: process.env.MYSQLHOST || 'localhost',
+  user: process.env.MYSQLUSER || 'root',
+  password: process.env.MYSQLPASSWORD || '',
+  database: process.env.MYSQLDATABASE || 'pikmi_db',
+  port: '3306',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
+};
 
 const pool = mysql.createPool(dbConfig);
 
