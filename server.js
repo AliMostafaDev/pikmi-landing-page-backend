@@ -54,11 +54,11 @@ const upload = multer({
 
 
 const dbConfig = {
-  host: process.env.MYSQLHOST,
-  user: process.env.MYSQLUSER,
-  password: process.env.MYSQLPASSWORD,
-  database: process.env.MYSQLDATABASE,
-  port: process.env.MYSQLPORT,
+  host: "mysql.railway.internal",
+  user: "root",
+  password: "NuRYZHaZMxGQoWtzsIyrnhGXHAIEhQsh",
+  database: "railway",
+  port: "3306",
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
